@@ -1,0 +1,138 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<html style="background-color: rgba(3, 85, 85, 0.5);">
+    <div class="xnavBar">
+        <ul class="smooth-scroll" style="padding: 0px; width: 100%">                
+            <a href="#oops"><button class="xnavBarBtn" id="">About</button></a>   
+            <a href="#oops"><button class="xnavBarBtn" id="">Get Started</button></a>
+
+            <a href="#lrn"><button class="xnavBarBtn" id="">Learning</button></a>           
+                
+            <span class="dropdown">
+                <button class="xnavBarBtn" type="button" id="dropdownMenuButton5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Discover
+                </button>
+                <div class="dropdown-menu" style="width: max-content; outline:none; border: none; padding: 0px; background-color: transparent" aria-labelledby="dropdownMenuButton5">
+                    <a class="xnavBarBtn" href="#oops">MEE Faculty</a><br>
+                    <a class="xnavBarBtn" href="#oops">Our team</a><br>
+                    <a class="xnavBarBtn" href="#oops">How do we work</a><br>
+                </div>
+            </span>
+
+            <a href="#oops"><button class="xnavBarBtn" id="">Organizers Editorial</button></a>
+
+            <a href="#oops"><button class="xnavBarBtn" id="">Sponsor's Editorial</button></a>
+
+            <p id="titler" class="navBarCaption" style="font-size: 18px; padding-top: 3px">Sponsored for 2020 by: Faculty of Mechanical Engineering - Alfurat University</p>
+        </ul>
+    </div>
+    <header id="top" style="height: 100vh;">
+        <div style="position: absolute; left:10px; bottom: 10px; filter: opacity(80%)">
+            <img src="./img/sdg17.jpg" class="sdg" style="margin-bottom: 10px" alt="">
+            <span style="word-wrap:break-word; padding-top: 30px; width: 100px; display: inline-block; -webkit-text-fill-color:white">We are open for partnerships</span><br>
+            <img src="./img/sdg9.png" class="sdg" style="margin-bottom: 10px" alt="">
+            <span style="word-wrap:break-word; padding-top: 30px; width: 100px; display: inline-block; -webkit-text-fill-color:white">Looking For Innovation</span><br>
+            <img src="./img/sdg5.png" class="sdg" style="margin-bottom: 10px" alt=""><br>
+            <img src="./img/sdg7.png" class="sdg" style="margin-bottom: 10px" alt=""><br>
+            <img src="./img/sdg4.png" class="sdg" style="margin-bottom: 10px" alt=""><br>
+        </div>
+        <center>
+            <p style="height: 10vh;"></p>
+            <p style="-webkit-text-fill-color:tomato; font-size: 50px">Robotics & Artificial Intelligence Lab</p>
+            <p style="width: fit-content; padding-left: 16px; padding-right: 16px; -webkit-text-fill-color: rgb(7, 51, 51); font-size: 30px; background-color:rgba(255, 255, 255, 0.644); border-top-left-radius: 40px">Our Values: Equal Opportunity, Contain Each Others</p>
+            <p style="width: fit-content; padding-left: 16px; padding-right: 16px; -webkit-text-fill-color: rgb(7, 51, 51); font-size: 30px; background-color:rgba(255, 255, 255, 0.644); border-bottom-right-radius: 40px">Our Interestes: Innovation, Thinking outside the box</p>
+            <br>
+        </center>
+    </header>
+    <div style="visibility: hidden;" id="test1">
+            <h3>Section 1</h3>
+            <hr>
+            <h5>Smooth Scroll Example</h5>
+            <h5>Smooth Scroll Example</h5>
+            <h5>Smooth Scroll Example</h5>
+            <h5>Smooth Scroll Example</h5>
+            <h5>Smooth Scroll Example</h5>
+            <h5>Smooth Scroll Example</h5>
+            <h5>Smooth Scroll Example</h5>
+            <h5>Smooth Scroll Example</h5>
+    </div>
+          
+          
+    <div id="test2" style="padding-top: 50px; height: 100vh">
+        
+        <br><br>
+        <a href="#top"><button class="mainBtn" id="back"> < Back</button></a>
+    
+        <script>
+            $("#back").click(function(){
+                $("#right").load("right.html");
+                document.getElementById("titler").innerHTML = "We are looking for your ideas !";
+            });
+            $("#back2").click(function(){
+                $("#right").load("right.html");
+                document.getElementById("titler").innerHTML = "We are looking for your ideas !";
+            });
+            $("#btnTeam").click(function(){
+                document.getElementById("titler").innerHTML = "Project Team";
+            });
+        </script>
+    </div>
+    
+    <div id="lrn" style="height: 100vh; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/girls-on-desk-looking-at-notebook-159823.jpg); background-size: cover ;">
+        <p style="height: 20vh;"></p>
+        <center>
+            <br>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px" class="xnavBarBtn">Julia</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">R</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">Arduino</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px" class="xnavBarBtn">Rasbperry Pi</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">Statics</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">Dynamics</button>
+            <br>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px" class="xnavBarBtn">C++</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">Python</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">SQL</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px" class="xnavBarBtn">SolidWorks</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">Mathematics</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">Lefting Machines</button>
+            <br>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px" class="xnavBarBtn">PHP</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">HTML</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">Volunteering & Leadership</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px" class="xnavBarBtn">Scketching</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">Lego</button>
+            <br>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">Javascript</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">DIYToolkit</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">Competitions Guide</button>
+                <button style="margin-top: 11px; height: 60px; border-radius: 10px; width: fit-content; font-size: 40px; margin-right: 10px"  class="xnavBarBtn">MIT App Inventor</button>
+            <br>
+            <a href="#top"><button class="mainBtn" style="margin-top: 60px;" id="back2"> < Back</button></a>
+            </center>
+            
+    </div>
+
+    <div id="oops" style="height: 100vh;">
+        <center>
+            <i class="fa fa-heart" style="margin-top: 20vh; font-size: 60px; -webkit-text-fill-color: teal;"></i>
+            <h1 style="-webkit-text-fill-color: teal;">Thank you for being interested :) !</h1>
+            <h2 style="-webkit-text-fill-color: tomato;">We are working on this topic, waiting for<br>the invitations & content to be completed !</h2>
+            <h2 style="-webkit-text-fill-color: white; padding: 10px ; background-color: teal; width: fit-content">It's a pleasure to hear from you at our e-mail inbox :) !</h2>
+            <br>
+            <a href="#top"><button class="mainBtn" id="back2"> < Back</button></a>
+        </center>
+    </div>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $("#right").load("right.html");
+    /*$("#btnTeam2").click(function(){
+        $("#right").load("about.htm");
+        document.getElementById("titler").innerHTML = "Project Team";
+    });*/
+</script>

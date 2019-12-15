@@ -4,10 +4,12 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<html style="background-color: rgba(3, 85, 85, 0.5);">
+
+
+<html style="background-color: rgba(3, 85, 85, 0.001);">
     <div class="xnavBar">
         <ul class="smooth-scroll" style="padding: 0px; width: 100%">                
-            <a href="#oops"><button class="xnavBarBtn" id="">About</button></a>   
+            <a href="#oops"><button class="xnavBarBtn" id="">Media</button></a>   
             <a href="#oops"><button class="xnavBarBtn" id="">Get Started</button></a>
 
             <a href="#lrn"><button class="xnavBarBtn" id="">Learning</button></a>           
@@ -25,26 +27,42 @@
 
             <a href="#oops"><button class="xnavBarBtn" id="">Organizers Editorial</button></a>
 
-            <a href="#oops"><button class="xnavBarBtn" id="">Sponsor's Editorial</button></a>
+            <a href="#sponsor_edit"><button class="xnavBarBtn" id="">Sponsor's Editorial</button></a>
 
-            <p id="titler" class="navBarCaption" style="font-size: 18px; padding-top: 3px">Sponsored for 2020 by: Faculty of Mechanical Engineering - Alfurat University</p>
+            <a href="#contact"><button class="xnavBarBtn" id="">Contact</button></a>
+
+            <p id="titler" class="navBarCaption" style="font-size: 17px; padding-top: 3px">Sponsor for 2020: Faculty of Mechanical Engineering - Alfurat University</p>
         </ul>
     </div>
     <header id="top" style="height: 100vh;">
+        <div style="position: absolute; right:10px; bottom: 10px; filter: opacity(80%)">
+            <a href="./mitlcn.html"><img class="hoverer" src="./img/mit.jpg" alt=""></a><br>
+            <a href="./bsdlcn.html"><img class="hoverer" src="./img/bsd.jpg" style="margin-top: 10px" alt=""></a><br>
+        </div>
         <div style="position: absolute; left:10px; bottom: 10px; filter: opacity(80%)">
             <img src="./img/sdg17.jpg" class="sdg" style="margin-bottom: 10px" alt="">
-            <span style="word-wrap:break-word; padding-top: 30px; width: 100px; display: inline-block; -webkit-text-fill-color:white">We are open for partnerships</span><br>
-            <img src="./img/sdg9.png" class="sdg" style="margin-bottom: 10px" alt="">
-            <span style="word-wrap:break-word; padding-top: 30px; width: 100px; display: inline-block; -webkit-text-fill-color:white">Looking For Innovation</span><br>
-            <img src="./img/sdg5.png" class="sdg" style="margin-bottom: 10px" alt=""><br>
-            <img src="./img/sdg7.png" class="sdg" style="margin-bottom: 10px" alt=""><br>
-            <img src="./img/sdg4.png" class="sdg" style="margin-bottom: 10px" alt=""><br>
+            <span class="sdgtext" style="word-wrap:break-word; display: inline-block; -webkit-text-fill-color:white">We are open for global partnerships</span>
+                <br>
+            <a href="#sdg9"><img src="./img/sdg9.png" class="sdg" style="margin-bottom: 10px" alt=""></a>
+            <span class="sdgtext" style="word-wrap:break-word; display: inline-block; -webkit-text-fill-color:white">Looking For Innovation</span>
+                <br>
+            <img src="./img/sdg5.png" class="sdg" style="margin-bottom: 10px" alt="">
+            <span class="sdgtext" style="word-wrap:break-word; display: inline-block; -webkit-text-fill-color:white">Commited to Gender Equality</span>
+                <br>
+            <img src="./img/sdg7.png" class="sdg" style="margin-bottom: 10px" alt="">
+            <span class="sdgtext" style="word-wrap:break-word; display: inline-block; -webkit-text-fill-color:white">Looking Forward Green Energy</span>
+                <br>
+            <img src="./img/sdg4.png" class="sdg" style="margin-bottom: 10px" alt="">
+            <span class="sdgtext" style="word-wrap:break-word; display: inline-block; -webkit-text-fill-color:white">Presenting a High Quality Education</span>
+                <br>
         </div>
         <center>
             <p style="height: 10vh;"></p>
             <p style="-webkit-text-fill-color:tomato; font-size: 50px">Robotics & Artificial Intelligence Lab</p>
-            <p style="width: fit-content; padding-left: 16px; padding-right: 16px; -webkit-text-fill-color: rgb(7, 51, 51); font-size: 30px; background-color:rgba(255, 255, 255, 0.644); border-top-left-radius: 40px">Our Values: Equal Opportunity, Contain Each Others</p>
-            <p style="width: fit-content; padding-left: 16px; padding-right: 16px; -webkit-text-fill-color: rgb(7, 51, 51); font-size: 30px; background-color:rgba(255, 255, 255, 0.644); border-bottom-right-radius: 40px">Our Interestes: Innovation, Thinking outside the box</p>
+            <p style="min-width: 750px; width: fit-content; padding-left: 16px; padding-right: 16px; -webkit-text-fill-color: rgb(7, 51, 51); font-size: 30px; background-color:rgba(255, 255, 255, 0.644); border-top-left-radius: 40px">
+                Our Values: Equal Opportunity, Accepting Each Other</p>
+            <p style="min-width: 750px; width: fit-content; padding-left: 16px; padding-right: 16px; -webkit-text-fill-color: rgb(7, 51, 51); font-size: 30px; background-color:rgba(255, 255, 255, 0.644); border-bottom-right-radius: 40px">
+                Our Interestes: Innovation, Thinking outside the box</p>
             <br>
         </center>
     </header>
@@ -114,6 +132,87 @@
             <a href="#top"><button class="mainBtn" style="margin-top: 60px;" id="back2"> < Back</button></a>
             </center>
             
+    </div>
+
+    <div id="contact" style="height: 100vh">
+        <p style="height: 20vh;"></p>
+        <center>
+            <table>
+                <tr>
+                    <td><span style="font-size: 168px;-webkit-text-fill-color: rgba(0, 128, 128, 0.829); width: fit-content; padding-left: 10px; padding-right: 10px"><i class="fa fa-envelope"></i></span>
+                    </td>
+                    <td>
+                        <span style="font-size: 20px;">E-Mail: rbtailab@alfurat.org</span><br>
+                        <span style="font-size: 20px;">Phone: Mr.Name Lstname +963991112233</span><br>
+                        <span style="font-size: 20px;">Syria - Dier EzZowr - Faculty of Mechanical and Electrical Engineering</span>
+                    </td>
+                </tr>
+            </table>
+            <a href="#top"><button class="mainBtn" style="margin-top: 60px;" id="back2"> < Back</button></a>
+
+        </center>
+    </div>
+
+    <div id="org_edit" style="height: 100vh;">
+
+    </div>
+
+    <div id="sponsor_edit" style="height: 100vh;">
+        <p style="height: 20vh;"></p>
+        <center>
+        <table>
+            <tr>
+            <td>
+                <img src="./img/steve.png" style="margin-top: -70px; width: 200px; border-radius: 20px;" alt="">
+            </td>
+            <td>
+                <span style="padding-left: 20px; font-size: 20px; width: 40vw; word-wrap:break-word; display: inline-block;">Again, you can't connect the dots looking forward; you can only connect them looking backward. So you have to trust that the dots will somehow connect in your future. You have to trust in something - your gut, destiny, life, karma, whatever. This approach has never let me down, and it has made all the difference in my life ! .</span>
+                <br>
+                <span style="padding-left: 20px; font-size: 20px; width: 40vw; word-wrap:break-word; display: inline-block;">
+                        This was the closest I've been to facing death, and I hope it's the closest I get for a few more decades. Having lived through it, I can now say this to you with a bit more certainty than when death was a useful but purely intellectual concept ( GO ! )            
+                    </span>
+            </td>
+            </tr>
+        </table>
+        <a href="#top"><button class="mainBtn" style="margin-top: 60px;" id="back2"> < Back</button></a>
+
+        </center>
+    </div>
+
+    <div id="sdg9" style="height: 100vh;">
+        <p style="height: 3vh;"></p>
+        <center>
+            <span style="font-size: 60px; -webkit-text-fill-color: rgb(255, 136, 0)">Sustainable development Goal No.9</span>
+            <table>
+                <tr>
+                    <td style="font-size: 80px; -webkit-text-fill-color: teal"><span>9<span style="-webkit-text-fill-color: tomato;">.</span>1<span style="-webkit-text-fill-color: tomato;">.</span></span></td>
+                    <td style="padding-left: 20px; font-size: 20px; width: 40vw; word-wrap:break-word; display: inline-block;">
+                        Develop quality, reliable, sustainable and resilient infrastructure, including regional and transborder infrastructure, to support economic development and human well-being, with a focus on affordable and equitable access for all
+                    </td>
+                    <td style="font-size: 80px; -webkit-text-fill-color: teal"><span>9<span style="-webkit-text-fill-color: tomato;">.</span>2<span style="-webkit-text-fill-color: tomato;">.</span></span></td>
+                    <td style="padding-left: 20px; font-size: 20px; width: 40vw; word-wrap:break-word; display: inline-block;">
+                            Promote inclusive and sustainable industrialization and, by 2030, significantly raise industry's share of employment and gross domestic product, in line with national circumstances, and double its share in least developed countries                    </td>
+                </tr>
+                <tr>
+                        <td style="font-size: 80px; -webkit-text-fill-color: teal"><span>9<span style="-webkit-text-fill-color: tomato;">.</span>3<span style="-webkit-text-fill-color: tomato;">.</span></span></td>
+                        <td style="padding-left: 20px; font-size: 20px; width: 40vw; word-wrap:break-word; display: inline-block;">
+                            Increase the access of small-scale industrial and other enterprises, in particular in developing countries, to financial services, including affordable credit, and their integration into value chains and markets                    </td>
+                        <td style="font-size: 80px; -webkit-text-fill-color: teal"><span>9<span style="-webkit-text-fill-color: tomato;">.</span>4<span style="-webkit-text-fill-color: tomato;">.</span></span></td>
+                        <td style="padding-left: 20px; font-size: 20px; width: 40vw; word-wrap:break-word; display: inline-block;">
+                        By 2030, upgrade infrastructure and retrofit industries to make them sustainable, with increased resource-use efficiency and greater adoption of clean and environmentally sound technologies and industrial processes, with all countries taking action in accordance with their respective capabilities
+                </tr>
+                <tr>
+                    <td style="font-size: 80px; -webkit-text-fill-color: teal"><span>9<span style="-webkit-text-fill-color: tomato;">.</span>5<span style="-webkit-text-fill-color: tomato;">.</span></span></td>
+                    <td style="padding-left: 20px; font-size: 20px; width: 40vw; word-wrap:break-word; display: inline-block;">
+                            Enhance scientific research, upgrade the technological capabilities of industrial sectors in all countries, in particular developing countries, including, by 2030, encouraging innovation and substantially increasing the number of research and development workers per 1 million people and public and private research and development spending
+                    </td>
+                    <td></td>
+                    <td>
+                        <a href="#top"><button class="mainBtn" style="margin-top: 60px;" id="back2"> < Back</button></a>
+                    </td>
+                </tr>
+            </table>
+        </center>
     </div>
 
     <div id="oops" style="height: 100vh;">

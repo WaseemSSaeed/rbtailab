@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    transition: 0.5s;
 }
 header {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url(./img/high-angle-photo-of-robot-2599244.jpg);
@@ -136,6 +137,7 @@ header {
     width: 100%;
     height: 35px;
     background-color: rgba(153, 205, 50, 0.548);
+    z-index: 1;
 }
 .xnavBarBtn{
     margin: none;
@@ -193,5 +195,29 @@ header {
     transform: rotateZ(360deg);
     width: 150px;
     left: 40px;
+    transition: 1s;
+}
+
+.sdgtext{
+    width: 100px;
+}
+
+.sdgtext:hover{
+    font-size: 30px;
+    width: 250px;
+    transition: 1s;
+}
+
+.hoverer{
+    cursor: pointer;
+    filter: opacity(50%);
+    width: 50px;
+    transition: 1s;
+}
+
+.hoverer:hover{
+    width: 150px;
+    filter: opacity(100%);
+    right: 100px;
     transition: 1s;
 }

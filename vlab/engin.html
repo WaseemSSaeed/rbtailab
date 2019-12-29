@@ -332,7 +332,7 @@
             i+=1;
         }
         Highcharts.seriesTypes.line.prototype.getPointSpline = Highcharts.seriesTypes.spline.prototype.getPointSpline;
-        Highcharts.chart('tan', {
+        Highcharts.chart('motion', {
     
             title: {
                 text: 'Tan Wave'
@@ -345,13 +345,13 @@
         
             yAxis: {
                 title: {
-                    text: 'Tan'
+                    text: 'X'
                 }
             },
         
             xAxis: {
                 accessibility: {
-                    rangeDescription: 'Angle'
+                    rangeDescription: 'Time'
                 }
             },
         

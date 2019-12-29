@@ -1,0 +1,315 @@
+<script src="../hchrts/highcharts.js"></script>
+<script src="../hchrts/modules/exporting.js"></script>
+<script src="../hchrts/modules/export-data.js"></script>
+
+<input id="num" type="number" value=0>
+<button onclick="doSin()">Sin</button>
+<button onclick="doCos()">Cos</button>
+<button onclick="doTan()">Tan</button>
+<button onclick="doComp()">Com.</button>
+<button onclick="doAll()">All</button>
+
+<div style="width: 100%;">
+    <figure class="highcharts-figure">
+        <div id="sin" style="float: left; width: 30%"></div>
+        <div id="cos" style="float: left; width: 30%"></div>
+        <div id="tan" style="float: left; width: 30%"></div>
+        <div id="comp" style="float: left; width: 30%"></div>
+        <p class="highcharts-description">
+            Basic line chart showing trends in a dataset. This chart includes the
+            <code>series-label</code> module, which adds a label to each line for
+            enhanced readability.
+        </p>
+    </figure>
+</div>
+
+
+
+<script>
+    function doAll(){
+        doSin();
+        doCos();
+        doTan();
+        doComp();
+    }
+    function doSin(){
+        xs = [];
+        i = 0;
+        while(i!=document.getElementById("num").value){
+            xs[i]= Math.sin((Math.PI*i)/180);
+            i+=1;
+        }
+        Highcharts.seriesTypes.line.prototype.getPointSpline = Highcharts.seriesTypes.spline.prototype.getPointSpline;
+        Highcharts.chart('sin', {
+    
+            title: {
+                text: 'Sin Wave'
+            },
+        
+            subtitle: {
+                //text: 'Source: thesolarfoundation.com'
+                text: 'Robotics & AI Lab Virtual Lab'
+            },
+        
+            yAxis: {
+                title: {
+                    text: 'Sin'
+                }
+            },
+        
+            xAxis: {
+                accessibility: {
+                    rangeDescription: 'Angle'
+                }
+            },
+        
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+        
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 0
+                }
+            },
+        
+            series: [{
+                name: 'Installation',
+                data: xs
+            }],
+        
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+        
+        });
+    }
+    
+    function doCos(){
+        xs = [];
+        i = 0;
+        while(i!=document.getElementById("num").value){
+            xs[i]= Math.cos((Math.PI*i)/180);
+            i+=1;
+        }
+        Highcharts.seriesTypes.line.prototype.getPointSpline = Highcharts.seriesTypes.spline.prototype.getPointSpline;
+        Highcharts.chart('cos', {
+    
+            title: {
+                text: 'Cos Wave'
+            },
+        
+            subtitle: {
+                //text: 'Source: thesolarfoundation.com'
+                text: 'Robotics & AI Lab Virtual Lab'
+            },
+        
+            yAxis: {
+                title: {
+                    text: 'Cos'
+                }
+            },
+        
+            xAxis: {
+                accessibility: {
+                    rangeDescription: 'Angle'
+                }
+            },
+        
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+        
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 0
+                }
+            },
+        
+            series: [{
+                name: 'Installation',
+                data: xs
+            }],
+        
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+        
+        });
+    }
+    function doTan(){
+        xs = [];
+        i = 0;
+        while(i!=document.getElementById("num").value){
+            xs[i]= Math.tan((Math.PI*i)/180);
+            i+=1;
+        }
+        Highcharts.seriesTypes.line.prototype.getPointSpline = Highcharts.seriesTypes.spline.prototype.getPointSpline;
+        Highcharts.chart('tan', {
+    
+            title: {
+                text: 'Tan Wave'
+            },
+        
+            subtitle: {
+                //text: 'Source: thesolarfoundation.com'
+                text: 'Robotics & AI Lab Virtual Lab'
+            },
+        
+            yAxis: {
+                title: {
+                    text: 'Tan'
+                }
+            },
+        
+            xAxis: {
+                accessibility: {
+                    rangeDescription: 'Angle'
+                }
+            },
+        
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+        
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 0
+                }
+            },
+        
+            series: [{
+                name: 'Installation',
+                data: xs
+            }],
+        
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+        
+        });
+    }
+    function doComp(){
+        sined = [];
+        cosed = [];
+        taned = [];
+        i = 0;
+        while(i!=document.getElementById("num").value){
+            sined[i]= Math.sin((Math.PI*i)/180);
+            cosed[i]= Math.cos((Math.PI*i)/180);
+            taned[i]= Math.tan((Math.PI*i)/180);
+            i+=1;
+        }
+        Highcharts.seriesTypes.line.prototype.getPointSpline = Highcharts.seriesTypes.spline.prototype.getPointSpline;
+        Highcharts.chart('comp', {
+    
+            title: {
+                text: 'Com.'
+            },
+        
+            subtitle: {
+                //text: 'Source: thesolarfoundation.com'
+                text: 'Robotics & AI Lab Virtual Lab'
+            },
+        
+            yAxis: {
+                title: {
+                    text: 'Function'
+                }
+            },
+        
+            xAxis: {
+                accessibility: {
+                    rangeDescription: 'Angle'
+                }
+            },
+        
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+        
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 0
+                }
+            },
+        
+            series: [{
+                name: 'Sin',
+                data: sined
+            },{
+                name: 'Cos',
+                data: cosed
+            }],
+        
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+        
+        });
+    }
+</script>

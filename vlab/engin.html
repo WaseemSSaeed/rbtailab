@@ -10,6 +10,11 @@
 <button onclick="doTan()">Tan</button>
 <button onclick="doComp()">Com.</button>
 <button onclick="doAll()">All</button>
+<br>
+<button onclick="doComp()">Simple Harmonic Motion</button>
+<input id="xo" type="number" value=0 placeholder="X0">
+<input id="omiga" type="number" value=0 placeholder="Natural Freq.">
+<input id="time" type="number" value=0 placeholder="Time">
 
 <div style="width: 100%;">
     <figure class="highcharts-figure">
@@ -17,6 +22,7 @@
         <div id="cos" style="float: left; width: 30%"></div>
         <div id="tan" style="float: left; width: 30%"></div>
         <div id="comp" style="float: left; width: 30%"></div>
+        <div id="motion" style="float: left; width: 30%"></div>
         <p class="highcharts-description">
             Basic line chart showing trends in a dataset. This chart includes the
             <code>series-label</code> module, which adds a label to each line for

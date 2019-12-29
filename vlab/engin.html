@@ -327,9 +327,14 @@
     function doSHM(){
         xs = [];
         i = 0;
-        while(i!=document.getElementById("num").value){
-            xs[i]= (document.getElementById("xo").value)*Math.sin((document.getElementById("omiga").value)*(document.getElementById("time").value));
-            i+=1;
+        to = 0;
+        t=document.getElementById("time").value;
+        while(to!=t){
+            while(i!=document.getElementById("num").value){
+                xs[i]= (document.getElementById("xo").value)*Math.sin((document.getElementById("omiga").value)*to);
+                i+=1;
+            }
+            to+=1;
         }
         Highcharts.seriesTypes.line.prototype.getPointSpline = Highcharts.seriesTypes.spline.prototype.getPointSpline;
         Highcharts.chart('motion', {

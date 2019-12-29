@@ -11,7 +11,7 @@
 <button onclick="doComp()">Com.</button>
 <button onclick="doAll()">All</button>
 <br>
-<button onclick="doComp()">Simple Harmonic Motion</button>
+<button onclick="doSHM()">Simple Harmonic Motion</button>
 <span>X0</span>
 <input id="xo" type="number" value=0>
 <span>Natural Freq.</span>
@@ -304,6 +304,75 @@
             },{
                 name: 'Cos',
                 data: cosed
+            }],
+        
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+        
+        });
+    }
+    
+    function doSHM(){
+        xs = [];
+        i = 0;
+        while(i!=document.getElementById("num").value){
+            xs[i]= (document.getElementById("xo").value)*Math.sin((document.getElementById("omiga").value)*(document.getElementById("time").value));
+            i+=1;
+        }
+        Highcharts.seriesTypes.line.prototype.getPointSpline = Highcharts.seriesTypes.spline.prototype.getPointSpline;
+        Highcharts.chart('tan', {
+    
+            title: {
+                text: 'Tan Wave'
+            },
+        
+            subtitle: {
+                //text: 'Source: thesolarfoundation.com'
+                text: 'Robotics & AI Lab Virtual Lab'
+            },
+        
+            yAxis: {
+                title: {
+                    text: 'Tan'
+                }
+            },
+        
+            xAxis: {
+                accessibility: {
+                    rangeDescription: 'Angle'
+                }
+            },
+        
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+        
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 0
+                }
+            },
+        
+            series: [{
+                name: 'Installation',
+                data: xs
             }],
         
             responsive: {

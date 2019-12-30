@@ -1,31 +1,32 @@
+<link rel="stylesheet" href="./vlstyle.css">
 <script src="https://code.highcharts.com/highcharts.js"></script>
 
 <script src="../hchrts/highcharts.js"></script>
 <script src="../hchrts/modules/exporting.js"></script>
 <script src="../hchrts/modules/export-data.js"></script>
 
-<input id="num" type="number" value=0>
-<button onclick="doSin()">Sin</button>
-<button onclick="doCos()">Cos</button>
-<button onclick="doTan()">Tan</button>
-<button onclick="doComp()">Com.</button>
-<button onclick="doAll()">All</button>
+<input onchange="doAll()" id="num" type="number" value=360>
+<button class="btnCalc" onclick="doSin()">Sin</button>
+<button class="btnCalc" onclick="doCos()">Cos</button>
+<button class="btnCalc" onclick="doTan()">Tan</button>
+<button class="btnCalc" id="comBtn" onclick="doComp()">Com.</button>
+<button id="AllBtn" class="btnCalc" onclick="doAll()">All</button>
 <br>
-<button onclick="doSHM()">Simple Harmonic Motion</button>
+<button id="doSHMbtn" class="btnCalc" onclick="doSHM()">Simple Harmonic Motion</button>
 <span>X0</span>
-<input id="xo" type="number" value=0>
+<input onchange="doSHM()" id="xo" type="number" value=10>
 <span>Natural Freq.</span>
-<input id="omiga" type="number" value=0>
+<input onchange="doSHM()" id="omiga" type="number" value=6>
 <span>Time</span>
-<input id="time" type="number" value=0>
+<input onchange="doSHM()" id="time" type="number" value=40>
 
 <div style="width: 100%;">
     <figure class="highcharts-figure">
+        <div id="comp" style="float: left; width: 30%"></div>
+        <div id="motion" style="float: left; width: 30%"></div>
         <div id="sin" style="float: left; width: 30%"></div>
         <div id="cos" style="float: left; width: 30%"></div>
         <div id="tan" style="float: left; width: 30%"></div>
-        <div id="comp" style="float: left; width: 30%"></div>
-        <div id="motion" style="float: left; width: 30%"></div>
         <p class="highcharts-description">
             
         </p>
@@ -33,13 +34,17 @@
 </div>
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script>
+    $("#AllBtn").trigger("click");
+
     function doAll(){
+        doComp();
+        doSHM();
         doSin();
         doCos();
         doTan();
-        doComp();
     }
     function doSin(){
         xs = [];
@@ -53,16 +58,22 @@
     
             title: {
                 text: 'Sin Wave'
+                , style: {
+                    color: "teal"
+                }
             },
         
             subtitle: {
                 //text: 'Source: thesolarfoundation.com'
                 text: 'Robotics & AI Lab Virtual Lab'
+                , style: {
+                    color: "tomato"
+                }
             },
         
             yAxis: {
                 title: {
-                    text: 'Sin'
+                    text: 'Sin.'
                 }
             },
         
@@ -88,7 +99,7 @@
             },
         
             series: [{
-                name: 'Installation',
+                name: 'SIN',
                 data: xs
             }],
         
@@ -122,16 +133,22 @@
     
             title: {
                 text: 'Cos Wave'
+                , style: {
+                    color: "teal"
+                }
             },
         
             subtitle: {
                 //text: 'Source: thesolarfoundation.com'
                 text: 'Robotics & AI Lab Virtual Lab'
+                , style: {
+                    color: "tomato"
+                }
             },
         
             yAxis: {
                 title: {
-                    text: 'Cos'
+                    text: 'Cos.'
                 }
             },
         
@@ -157,7 +174,7 @@
             },
         
             series: [{
-                name: 'Installation',
+                name: 'COS',
                 data: xs
             }],
         
@@ -190,16 +207,22 @@
     
             title: {
                 text: 'Tan Wave'
+                , style: {
+                    color: "teal"
+                }
             },
         
             subtitle: {
                 //text: 'Source: thesolarfoundation.com'
                 text: 'Robotics & AI Lab Virtual Lab'
+                , style: {
+                    color: "tomato"
+                }
             },
         
             yAxis: {
                 title: {
-                    text: 'Tan'
+                    text: 'Tan.'
                 }
             },
         
@@ -225,7 +248,7 @@
             },
         
             series: [{
-                name: 'Installation',
+                name: 'TAN',
                 data: xs
             }],
         
@@ -262,16 +285,23 @@
     
             title: {
                 text: 'Com.'
+                , style: {
+                    color: "teal"
+                }
             },
         
             subtitle: {
                 //text: 'Source: thesolarfoundation.com'
                 text: 'Robotics & AI Lab Virtual Lab'
+                , style: {
+                    color: "tomato"
+                }
             },
         
             yAxis: {
                 title: {
-                    text: 'Function'
+                    text: 'Sin. | Cos.'
+                    
                 }
             },
         
@@ -334,17 +364,23 @@
         Highcharts.chart('motion', {
     
             title: {
-                text: 'Tan Wave'
+                text: "Simple Harmonic Motion"
+                , style: {
+                    color: "teal"
+                }
             },
         
             subtitle: {
                 //text: 'Source: thesolarfoundation.com'
                 text: 'Robotics & AI Lab Virtual Lab'
+                , style: {
+                    color: "tomato"
+                }
             },
         
             yAxis: {
                 title: {
-                    text: 'X'
+                    text: 'Displacement'
                 }
             },
         
@@ -370,7 +406,7 @@
             },
         
             series: [{
-                name: 'Installation',
+                name: 'Displacement',
                 data: xs
             }],
         
